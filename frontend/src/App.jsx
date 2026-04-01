@@ -20,11 +20,7 @@ function AppLayout() {
       <main className="page-content">
         <Routes>
           <Route path="/" element={<States />} />
-          <Route path="/state/:id" element={
-              <ProtectedRoute>
-                <States />
-              </ProtectedRoute>
-            } />
+          <Route path="/state/:id" element={<StateDetails />} />
           <Route path="/destination/:id" element={<PlaceDetails />} />
           <Route path="/place/:id" element={<PlaceDetails />} />
           <Route path="/admin/login" element={<AdminLogin />} />

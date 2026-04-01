@@ -129,7 +129,7 @@ function StateDetails() {
 
                 return (
                   <article key={place._id} className="destination-card place-destination-card">
-                    <Link to={`/destination/${place._id}`} className="destination-card-image">
+                    <Link to={`/place/${place._id}`} className="destination-card-image">
                       <img
                         src={
                           placeImages.length > 0
@@ -156,7 +156,7 @@ function StateDetails() {
                         </span>
                         {place.bestTime ? <span className="detail-muted">Best Time: {place.bestTime}</span> : null}
                       </div>
-                      <Link to={`/destination/${place._id}`} className="btn btn-primary destination-btn">
+                      <Link to={`/place/${place._id}`} className="btn btn-primary destination-btn">
                         View Details
                       </Link>
                     </div>

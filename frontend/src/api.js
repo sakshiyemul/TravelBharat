@@ -15,7 +15,7 @@ const getServerBaseUrl = () => {
         return `${protocol}//${hostname}:5000`;
     }
 
-    return "http://localhost:5000";
+    return "https://travelbharat-baiz.onrender.com";
 };
 
 const SERVER_BASE_URL = getServerBaseUrl();

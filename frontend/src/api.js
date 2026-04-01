@@ -10,10 +10,16 @@ const getServerBaseUrl = () => {
         return envUrl.replace(/\/+$/, "");
     }
 
-    if (typeof window !== "undefined") {
-        const { protocol, hostname } = window.location;
-        return `${protocol}//${hostname}:5000`;
+    const getServerBaseUrl = () => {
+    const envUrl = import.meta.env.VITE_API_BASE_URL?.trim();
+
+    if (envUrl) {
+        return envUrl.replace(/\/+$/, "");
     }
+
+    // 👉 ALWAYS use deployed backend
+    return "https://travelbharat-baiz.onrender.com";
+};
 
     return "https://travelbharat-baiz.onrender.com";
 };
